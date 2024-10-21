@@ -1,0 +1,183 @@
+/* General setup; do not change the given CSS code. Add your own CSS code at the bottom! */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&family=Montserrat:wght@500&display=swap');
+
+/* Apply the site-wide body font */
+body {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.625rem; /* 10px base font size */
+  line-height: 1.6;
+}
+
+/* Heading font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+/* Centering top-level heading */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* Font size for headings */
+h2 {
+  font-size: 1.8rem;
+}
+
+/* Text indent for first paragraph after headings in sections */
+section p:first-of-type {
+  text-indent: 1.25rem;
+}
+
+/* Letter-spacing and word-spacing for body text */
+p {
+  letter-spacing: 0.03rem;
+  word-spacing: 0.1rem;
+}
+
+/* Link styling */
+a {
+  color: #a66;
+  text-decoration: underline;
+  outline: none;
+}
+
+a:hover, a:focus, a:visited {
+  text-decoration: none;
+  color: #660000;
+}
+
+a:active {
+  color: #555;
+  font-weight: bold;
+}
+
+/* External link icon for external links */
+/* External link icon for external links */
+a[href^="http"] {
+  position: relative;
+  padding-right: 1.5rem; /* Add space for the icon */
+}
+
+a[href^="http"]::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the icon */
+  width: 16px; /* Set width for the icon */
+  height: 16px; /* Set height for the icon */
+  background-image: url('assets/external-link.png'); /* Use your local image */
+  background-size: contain; /* Make sure the image fits inside the box */
+  background-repeat: no-repeat; /* Prevent repeating the image */
+}
+
+
+/* Lists styling */
+ul, ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+ul li, ol li {
+  line-height: 1.6;
+}
+
+/* Custom bullet for unordered lists */
+ul li {
+  list-style-type: square;
+}
+
+/* Navigation menu styling */
+/* Horizontal Navigation below the header */
+nav {
+  width: 100%; /* Full width under the header */
+  background-color: #f4f4f4; /* Light background for contrast */
+  padding: 1rem 0; /* Padding for spacing */
+  text-align: center; /* Centering the navigation items */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block; /* Display list items horizontally */
+  margin: 0 1rem; /* Horizontal spacing between the items */
+}
+
+nav ul li a {
+  padding: 0.5rem 1rem; /* Padding around the links */
+  background-color: #eee; /* Light background for the links */
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif; /* Use the heading font */
+  color: #333; /* Link color */
+  border: 1px solid #ccc; /* Border around links */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+  background-color: #ccc; /* Darken background on hover */
+}
+
+/* Adjusting content (section and aside) to sit below the navigation */
+section, aside {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+/* Clearing footer to avoid overlap */
+footer {
+  clear: both;
+}
